@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --orange: #ff6d00;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+a, a:hover, a:focus {
+  color: inherit;
+  text-decoration: none;
+  text-decoration-line: none;
+  text-decoration-thickness: initial;
+  text-decoration-style: initial;
+  text-decoration-color: initial;
+}
+.ml-2, .mx-2 {
+  margin-left: 0.5rem !important;
+}

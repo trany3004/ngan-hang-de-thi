@@ -1,0 +1,53 @@
+<div class="navbar d-none d-lg-flex">
+  <ul class="list-unstyled components d-flex justify-content-between">
+      <li [class.active]="router.isActive('/welcome', true)">
+          <a href="/" class="d-flex flex-column align-items-center justify-content-center">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            <span>Trang chủ</span>
+          </a>
+      </li>
+      <li [class.active]="router.isActive('/hocsinh', true)">
+        <a [routerLink]="['/hocsinh']" routerLinkActive="router-link-active"  class="d-flex flex-column align-items-center justify-content-center">
+          <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              <span>Học sinh</span>
+        </a>
+
+      </li>
+      <li [class.active]="router.isActive('/thay-co-giao', true)">
+          <a href="/thay-co-giao" class="d-flex flex-column align-items-center justify-content-center">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              <span>Thầy/cô giáo</span>
+          </a>
+      </li>
+      <li [class.active]="router.isActive('/ban-giam-hieu', true)">
+          <a href="/ban-giam-hieu" class="d-flex flex-column align-items-center justify-content-center">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              <span>Ban giám hiệu</span>
+          </a>
+      </li>
+      <li [class.active]="router.isActive('/phu-huynh-hoc-sinh', true)">
+          <a href="/phu-huynh-hoc-sinh" class="d-flex flex-column align-items-center justify-content-center">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              <span>PHHS</span>
+          </a>
+      </li>
+      <li [class.active]="router.isActive('/gioi-thieu', true)" class="d-none d-xl-block ">
+          <a href="/gioi-thieu" class="d-flex flex-column align-items-center justify-content-center">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              <span>Giới thiệu</span>
+          </a>
+      </li>
+      <li [class.active]="router.isActive('/lien-he', true)" class="d-none d-xl-block ">
+          <a href="/lien-he" class="d-flex flex-column align-items-center justify-content-center">
+              <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+              <span>Liên hệ</span>
+          </a>
+      </li>
+  </ul>
+                              <div class="account not-logged-in position-relative ml-auto">
+              <a href="/site/login" class="btn btn-outline-success ml-2">Đăng nhập</a>
+              <a href="/site/signup" class="btn btn-success">Đăng ký</a>
+          </div>
+
+
+</div>

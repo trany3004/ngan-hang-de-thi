@@ -1,0 +1,31 @@
+.navbar {
+  box-shadow: 0px -4px 12px rgb(0 0 0 / 8%);
+  width: 100%;
+  padding: 1rem;
+  ul {
+    margin-bottom: 0;
+    li:not(:last-child) {
+      margin-right: 2rem;
+    }
+    li {
+      i {
+        visibility: hidden;
+      }
+      span {
+        font-weight: 500;
+      }
+      &.active {
+        color: var(--orange);
+        i {
+          visibility: visible;
+        }
+      }
+      &:hover {
+        color: var(--orange);
+        i {
+          visibility: visible;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+<!-- <app-header></app-header>
+<router-outlet>
+  <app-wellcome></app-wellcome>
+</router-outlet>
+<app-footer></app-footer> -->
+
+<div class="d-flex overflow-hidden flex-grow-1 h-100">
+  <app-header></app-header>
+  <div class="main flex-grow-1 overflow-hidden d-flex flex-column">
+    <app-menu></app-menu>
+    <router-outlet>
+    </router-outlet>
+  </div>
+</div>

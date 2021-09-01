@@ -6,50 +6,58 @@
         </a>
     </div>
     <ul class="list-unstyled componets mt-5">
-        <li class="">
+        <li [class.active]="router.isActive('/toan-hoc', true)">
             <a href="/toan-hoc" class="d-flex align-items-center">
                 <img src="https://eduvietnam.vn/images/subject-2.png" alt="" width="16px">
                 <span class="ml-2">Toán học</span>
             </a>
         </li>
+
         <li class="">
+        <li [class.active]="router.isActive('/vat-ly', true)">
             <a href="/vat-ly" class="d-flex align-items-center">
                 <img src="https://eduvietnam.vn/images/subject-6.png" alt="" width="16px">
                 <span class="ml-2">Vật lý</span>
             </a>
         </li>
         <li class="">
+          <li [class.active]="router.isActive('/hoa-hoc', true)">
             <a href="/hoa-hoc" class="d-flex align-items-center">
                 <img src="https://eduvietnam.vn/images/subject-7.png" alt="" width="16px">
                 <span class="ml-2">Hóa học</span>
             </a>
         </li>
         <li class="">
+          <li [class.active]="router.isActive('/sinh-hoc', true)">
             <a href="/sinh-hoc" class="d-flex align-items-center">
                 <img src="https://eduvietnam.vn/images/subject-8.png" alt="" width="16px">
                 <span class="ml-2">Sinh học</span>
             </a>
         </li>
         <li class="">
+          <li [class.active]="router.isActive('/tieng-anh', true)">
             <a href="/tieng-anh" class="d-flex align-items-center">
                 <img src="https://eduvietnam.vn/images/subject-1.png" alt="" width="16px">
                 <span class="ml-2">Tiếng anh</span>
             </a>
         </li>
         <li class="">
+          <li [class.active]="router.isActive('/lich-su', true)">
             <a href="/lich-su" class="d-flex align-items-center">
                 <img src="https://eduvietnam.vn/images/subject-3.png" alt="" width="16px">
                 <span class="ml-2">Lịch sử</span>
             </a>
         </li>
         <li class="">
+          <li [class.active]="router.isActive('/dia-ly', true)">
             <a href="/dia-ly" class="d-flex align-items-center">
                 <img src="https://eduvietnam.vn/images/subject-4.png" alt="" width="16px">
                 <span class="ml-2">Địa lý</span>
             </a>
         </li>
         <li class="">
-            <a href="/giao-duc-cong-dan" class="d-flex align-items-center">
+          <!-- <li [class.active]="router.isActive('/on-tap', true)"> -->
+            <a href="#" class="d-flex align-items-center">
                 <img src="https://eduvietnam.vn/images/subject-4.png" alt="" width="16px">
                 <span class="ml-2">GDCD</span>
             </a>

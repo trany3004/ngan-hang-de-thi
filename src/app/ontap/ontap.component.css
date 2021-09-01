@@ -1,0 +1,64 @@
+.containter-top{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+
+}
+.muc{
+  justify-content: space-between;
+  margin-top: 25%;
+}
+.baitap{
+  background-color:
+#28a745;
+border-radius:
+16px 16px 0px 0px;
+color:
+#ffffff;
+font-weight:
+500;
+line-height:
+24px;
+padding:
+16px;
+text-align:
+center;
+}
+.vie-card-body{
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+border-radius: 10px;
+line-height:
+24px;
+padding:
+16px;
+text-align:
+left;
+align-items: stretch;
+}
+.containter-top li{
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 15px;
+color:
+#404040;
+display:
+list-item;
+font-family:
+Montserrat;
+line-height:
+24px;
+margin:
+0px 0px 8px;
+padding:
+11.2px 16px;
+text-align:
+left;
+
+}
+
+.fixed-top {
+  position: fixed;
+    top: 80px;
+    right: 0;
+    z-index: 1030;
+    right: 30px;
+    left: unset;
+}

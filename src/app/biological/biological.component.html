@@ -1,0 +1,490 @@
+<div class='mb-4 pt-3 container'>
+  <form id="searchForm" action="/sinh-hoc" method="get"><div class="row">
+      <div class="mb-2 col-6 col-md-4">
+          <select id="subject" class="form-control" name="" onchange="onSubjectChange(event)">
+  <option value="quiz-template">--Môn học--</option>
+  <option value="toan-hoc">Toán</option>
+  <option value="tieng-anh">Tiếng Anh</option>
+  <option value="dia-ly">Địa lý</option>
+  <option value="lich-su">Lịch sử</option>
+  <option value="sinh-hoc" selected>Sinh học</option>
+  <option value="vat-ly">Vật lý</option>
+  <option value="hoa-hoc">Hóa học</option>
+  <option value="giao-duc-cong-dan">Giáo dục công dân</option>
+  </select>    </div>
+      <div class="mb-2 col-6 col-md-4">
+          <select id="classlevel" class="form-control" name="classLevel" onchange="this.form.submit()">
+  <option value="">--Lớp--</option>
+  <option value="10">Lớp 10</option>
+  <option value="11">Lớp 11</option>
+  <option value="12">Lớp 12</option>
+  <option value="13">Luyện thi vào lớp 10</option>
+  <option value="14">Luyện thi đại học</option>
+  </select>    </div>
+      <div class="mb-2 col-md-4">
+          <select id="type" class="form-control" name="type" onchange="this.form.submit()">
+  <option value="">--Loại bài kiểm tra--</option>
+  <option value="15min">Kiểm tra 15 phút</option>
+  <option value="45min">Kiểm tra chuyên đề</option>
+  <option value="90min">Kiểm tra định kì</option>
+  </select>    </div>
+
+      <div class="mb-2 col-md-4">
+          <select id="categoryid" class="form-control" name="categoryId" onchange="this.form.submit()">
+  <option value="">--Danh mục--</option>
+  <option value="140">[SI11.C1] CHUYỂN HÓA VẬT CHẤT VÀ NL Ở TV</option>
+  <option value="141">[SI11.C2] CHUYỂN HÓA VẬT CHẤT VÀ NL Ở ĐV</option>
+  <option value="142">[SI12.C1] CƠ CHẾ DI TRUYỀN VÀ BIẾN DỊ</option>
+  <option value="143">[SI12.C5] DI TRUYỀN HỌC NGƯỜI</option>
+  <option value="144">[SI12.C2] CÁC QUY LUẬT DI TRUYỀN</option>
+  <option value="145">[SI12.C3] DI TRUYỀN HỌC QUẦN THỂ</option>
+  <option value="147">[SI12.C9] QX SINH VẬT, HỆ SINH THÁI</option>
+  <option value="148">[SI12.C8] CÁ THỂ VÀ QUẦN THỂ SINH VẬT</option>
+  <option value="150">[SI12.C7] SỰ PS VÀ PT CỦA SỰ SỐNG TRÊN TRÁI ĐẤT</option>
+  <option value="151">[SI12.C6] BẰNG CHỨNG VÀ CƠ CHẾ TIẾN HÓA</option>
+  <option value="154">[SI12.C4] ỨNG DỤNG DI TRUYỀN HỌC</option>
+  <option value="166">[SI11.C4] SINH TRƯỞNG VÀ PHÁT TRIỂN</option>
+  <option value="169">[SI10.C1] THÀNH PHẦN HÓA HỌC CỦA TẾ BÀO</option>
+  <option value="170">[SI10.C2] CẤU TRÚC TẾ BÀO</option>
+  <option value="171">[SI10.C3] CHUYỂN HÓA VC VÀ NL CỦA TẾ BÀO</option>
+  <option value="172">[SI10.C4] PHÂN BÀO</option>
+  <option value="173">[SI10.C5] CHUYỂN HÓA VẬT CHẤT VÀ NL Ở VSV</option>
+  <option value="174">[SI10.C6] ST VÀ SS CỦA VSV</option>
+  <option value="175">[SI10.C7] VI RÚT VÀ BỆNH TRUYỀN NHIỄM</option>
+  <option value="176">[SI11.C3] CẢM ỨNG</option>
+  <option value="177">[SI11.C5] SINH SẢN</option>
+  <option value="215">ĐỀ THI SINH HỌC</option>
+  </select>    </div>
+      <div class="mb-2 col-md-4">
+          <select id="thematicid" class="form-control" name="thematicId" onchange="this.form.submit()">
+  <option value="">--Chuyên đề--</option>
+  </select>    </div>
+      <div class="mb-2 col-md-4">
+          <button class="btn btn-success w-100" type="submit">Tìm kiếm</button>
+      </div>
+
+
+  </div>
+
+      <hr>
+
+  </form>
+  <div id="w0" class="list-view"><div class="row"><div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="95">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/adn-va-nhan-doi-adn-cb">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/Iy5ALXSJcDfYTTUlfOwFcYja2xUCN1hF.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Adn và nhân đôi adn(cb)</p>
+                                      <p class="title d-md-none font-smaller">Adn và nhân đôi adn(cb)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="96">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/adn-va-nhan-doi-adn-nc">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/5mrzFkNTmg_QlQEtr14IVTY1jigbdqG_.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Adn và nhân đôi adn(nc)</p>
+                                      <p class="title d-md-none font-smaller">Adn và nhân đôi adn(nc)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="97">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/gen-arn-phien-ma-cb">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/qKTpD6OKO3_XlHTrHPzUbQFLO9UDqfcU.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Gen, arn, phiên mã(cb)</p>
+                                      <p class="title d-md-none font-smaller">Gen, arn, phiên mã(cb)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="98">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/gen-arn-phien-ma-nc">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/tD_CICXUp2_OZedZbPBaEfEkHytkuh2l.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Gen, arn, phiên mã(nc)</p>
+                                      <p class="title d-md-none font-smaller">Gen, arn, phiên mã(nc)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="99">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/ma-di-truyen-protein-dich-ma-cb">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/l_8jxNFQWqcoPiH_GJ9_DtS0_3ptL2IO.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Mã di truyền, protein, dịch mã(cb)</p>
+                                      <p class="title d-md-none font-smaller">Mã di truyền, protein, dịch mã(cb)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="100">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/ma-di-truyen-protein-dich-ma-nc">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/MNta1JPqqMfUQaansNZrtcCn9wzYUAZb.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Mã di truyền, protein, dịch mã(nc)</p>
+                                      <p class="title d-md-none font-smaller">Mã di truyền, protein, dịch mã(nc)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="101">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/dieu-hoa-hoat-dong-gen-cb">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/pt9QW6gnsBmubhRIKgAZRz3wiJvOk1I5.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Điều hòa hoạt động gen(cb)</p>
+                                      <p class="title d-md-none font-smaller">Điều hòa hoạt động gen(cb)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="102">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/dieu-hoa-hoat-dong-gen-nc">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/GTEeSQy67Xd1D9mOdCCGeilNMRRqHdMO.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Điều hòa hoạt động gen(nc)</p>
+                                      <p class="title d-md-none font-smaller">Điều hòa hoạt động gen(nc)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="103">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/dot-bien-gen-cb">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/XU4yJhefBahtsB9y42V4C0ZKWJwi42Uw.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Đột biến gen(cb)</p>
+                                      <p class="title d-md-none font-smaller">Đột biến gen(cb)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="104">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/dot-bien-gen-nc">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/4NEVpFVaBlEPMLAXEGSPITXmsj-EWKRs.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Đột biến gen(nc)</p>
+                                      <p class="title d-md-none font-smaller">Đột biến gen(nc)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="105">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/nst-nguyen-phan-piam-phan-cb">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/-aXpDgqttNgfwHCGNB3D5AUr-H0FOGYT.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Nst, nguyên phân, piảm phân(cb)</p>
+                                      <p class="title d-md-none font-smaller">Nst, nguyên phân, piảm phân(cb)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div>
+  <div class="col-6 col-md-4 col-lg-3 mb-3 d-flex" data-key="106">
+
+  <div class="quiz-template-item">
+      <a href="/sinh-hoc/nst-nguyen-phan-giam-phan-nc">
+          <img src="https://media.eduvietnam.vn/images/2021/06/20/5CviGRjmP9rQOlLfKgoONGnFsc8Tc208.png"
+               alt="" width="100%">
+          <span class="quiz-template-content">
+                                      <p class="title d-none d-md-block">Nst, nguyên phân, giảm phân(nc)</p>
+                                      <p class="title d-md-none font-smaller">Nst, nguyên phân, giảm phân(nc)</p>
+                                      <span class="d-flex mt-auto">
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                   fill="currentColor" class="bi bi-clock" viewBox="0 0 16 16">
+    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">15 phút</span>
+                                              <span class="ml-1 d-md-none font-x-small">15 phút</span>
+                                          </span>
+                                          <span class="d-flex flex-grow-1 align-items-center">
+                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                  fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286zm1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94z"/>
+  </svg>
+                                              <span class="ml-2 d-none d-md-block">10 câu</span>
+                                              <span class="ml-1 d-md-none font-x-small">10 câu</span>
+                                          </span>
+                                          </span>
+                                  </span>
+      </a>
+  </div>
+
+  </div></div><nav id="w1"><ul class="pagination"><li class="page-item prev disabled"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=1" data-page="0" tabindex="-1"><span aria-hidden="true">&laquo;</span>
+  <span class="sr-only">Previous</span></a></li>
+  <li class="page-item active"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=1" data-page="0">1</a></li>
+  <li class="page-item"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=2" data-page="1">2</a></li>
+  <li class="page-item"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=3" data-page="2">3</a></li>
+  <li class="page-item"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=4" data-page="3">4</a></li>
+  <li class="page-item"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=5" data-page="4">5</a></li>
+  <li class="page-item"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=6" data-page="5">6</a></li>
+  <li class="page-item"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=7" data-page="6">7</a></li>
+  <li class="page-item"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=8" data-page="7">8</a></li>
+  <li class="page-item next"><a class="page-link" href="/quiz-template/index?subject=sinh-hoc&amp;page=2" data-page="1"><span aria-hidden="true">&raquo;</span>
+  <span class="sr-only">Next</span></a></li></ul></nav></div></div>

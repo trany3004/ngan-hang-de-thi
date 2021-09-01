@@ -1,0 +1,8 @@
+.nganhang{
+  border-radius: 12px;
+    /* background-color: #dddddd; */
+  box-shadow: rgb(100 100 111 / 20%) 0px 7px 29px 0px;
+  width: calc(25% - 30px);
+  margin-left: 30px;
+
+}

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HocsinhComponent implements OnInit {
 
-  content = "$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$"
+  // content = "$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$"
   constructor() { }
   ngOnInit(): void {
   }

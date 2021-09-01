@@ -1,0 +1,13 @@
+.dropdown-menu-right {
+  right: 0;
+  left: auto;
+}
+.drop-header{
+  box-shadow: 0px 0px 1px 1px;
+  display: flex;
+  justify-content: center;
+  margin: 10px 10px 10px 10px;
+  /* width: calc(25% - 30px); */
+  /* margin-left: 30px; */
+  align-items: stretch;
+}

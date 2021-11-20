@@ -1,11 +1,18 @@
+.header{
+  text-align: center;
+ }
+ .header-top{
+   margin: 30px;
+ }
+
 .containter-top{
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 10px;
 
 }
 .muc{
-  justify-content: space-between;
-  margin-top: 25%;
+  justify-content: space-between !important;
+  margin-top: 25% !important;
 }
 .baitap{
   background-color:
@@ -55,10 +62,20 @@ left;
 }
 
 .fixed-top {
-  position: fixed;
-    top: 80px;
-    right: 0;
-    z-index: 1030;
-    right: 30px;
-    left: unset;
+  position: fixed !important;
+    top: 80px !important;
+    right: 0 !important;
+    z-index: 1030 !important;
+    right: 30px !important;
+    left: unset !important;
+    width: 25% !important;
+}
+
+figure.image {
+  display: flex;
+  justify-content: center;
+}
+figure.image img {
+  max-width: 500px;
+  max-height: 500px;
 }

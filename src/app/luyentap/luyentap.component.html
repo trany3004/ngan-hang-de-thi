@@ -1,45 +1,83 @@
 <div class="main-content">
-  <div class="container">
-                          </div>
+  <div class="container"></div>
   <div class="bg-white py-2 position-sticky fixed-top" style="z-index: 5">
-<div class="container">
-<div class="row">
-
-          <div class="col-6 col-md-3 mb-2">
-  <a href="/luyen-tap/1"
-     class="btn btn-success w-100">Nhận biết</a>
-</div>
-              <div class="col-6 col-md-3 mb-2">
-  <a href="/luyen-tap/1"
-     class="btn btn-outline-success w-100">Thông hiểu</a>
-</div>
-              <div class="col-6 col-md-3 mb-2">
-  <a href="/luyen-tap/1"
-     class="btn btn-outline-success w-100">Vận dụng</a>
-</div>
-              <div class="col-6 col-md-3 mb-2">
-  <a href="/luyen-tap/1"
-     class="btn btn-outline-success w-100">Vận dụng cao</a>
-</div>
+    <div class="container">
+      <div class="row luyentap">
+        <div class="col-6 col-md-3 mb-2">
+          <div (click)="getQuestion(1)" class="btn btn-outline-success w-100">
+            Dễ
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div (click)="getQuestion(2)" class="btn btn-outline-success w-100">
+            Trung bình
+          </div>
+        </div>
+        <div class="col-6 col-md-3 mb-2">
+          <div (click)="getQuestion(3)" class="btn btn-outline-success w-100">
+            Khó
+          </div>
+        </div>
       </div>
-</div>
-</div>
-
-<div class="container">
-  <div class="row justify-content-center">
-      <div class="col-md-6">
-          <img src="https://eduvietnam.vn/images/vip-upgrade.png" alt="" class="w-100">
-          <p class="text-center my-5">Đề tiếp tục làm bài, bạn phải <b>Đăng ký tài khoản Vip</b></p>
-
-          <a href="/user/upgrade-account" class="btn btn-success w-100">Đăng ký tài khoản
-              Vip</a>
-      </div>
+    </div>
   </div>
 
+  <div class="container">
+    <div class="row justify-content-center" *ngIf="!cauHoiDetail">
+      <div class="col-md-6">
+        <img
+          src="https://eduvietnam.vn/images/vip-upgrade.png"
+          alt=""
+          class="w-100"
+        />
+        <p class="text-center my-5">
+          Đề tiếp tục làm bài, bạn phải <b>Đăng ký tài khoản Vip</b>
+        </p>
+
+        <a href="/user/upgrade-account" class="btn btn-success w-100"
+          >Đăng ký tài khoản Vip</a
+        >
+      </div>
+    </div>
+    <div class="row justify-content-center" *ngIf="cauHoiDetail">
+      <div>
+        <div>Câu 1: </div>
+        <div [appMath]="cauHoiDetail.cauhoi">
+        </div>
+      </div>
+      <div style="width: 100%" class="d-flex flex-wrap">
+        <div *ngFor="let dapAn of cauHoiDetail.dapAn; let y = index" style="width: 50%" class="d-flex">
+           <div *ngIf="!cauHoiDetail.multipleAnswer">
+             <mat-radio-button
+             [checked]="dapAn.selected"
+             (change)="changeDapAn(y)"
+             class="rdo"
+             ></mat-radio-button
+           >
+           </div>
+           <div *ngIf="cauHoiDetail.multipleAnswer" style="padding-right: 16px;">
+             <mat-checkbox [(ngModel)]="dapAn.selected"></mat-checkbox>
+           </div>
+           <div
+            [appMath]="cauHoiDetail.dapAn[y].noidung"></div>
+       </div>
+       </div>
+       <div class="text-center" *ngIf="!hideDapAn">
+        <button id="confirmSubmitPractice" class="btn btn-success"
+        [disabled]="!checkXemDapAn()"
+        (click)="xemDapAn()"
+        >Xem kết quả</button>
+    </div>
+    <div *ngIf="checkXemDapAn() && hideDapAn" style="color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    padding: 20px;
+    border-radius: 10px;">
+      <span style="padding: 0.5rem 1rem;
+      background-color: #F5F5F6;
+      border-radius: 5px;">Giải thích đáp án</span>
+      <div [appMath]="cauHoiDetail.giaithich" style="margin-top: 10px"></div>
+    </div>
+    </div>
+  </div>
 </div>
-
-
-
-
-
-

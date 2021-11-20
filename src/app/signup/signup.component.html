@@ -1,167 +1,258 @@
-<div class="site-signup container">
-  <h1 class="text-center my-3">Vie Education - Tạo tài khoản</h1>
+<div class="site-signup container" [formGroup]="formGroup">
+  <h1 class="text-center my-3">VN Education - Tạo tài khoản</h1>
 
   <div class="row justify-content-center">
-      <div class="col-md-12">
-          <form id="form-signup" action="/site/signup" method="post">
-<input type="hidden" name="_csrf-frontend" value="HdF76LRHeejbv7jiAMb3H4HSwCroYMrv4ltFefVxsJwrlw2-xQQS3fbM1Nd1toEy9aOyWNwrvZjPYgsXowSd1Q==">
-          <div class="form-group row field-signupform-username required">
-<label class="col-md-4 col-lg-3" for="signupform-username">Tên đăng nhập</label>
-<div class="col-md-8 col-lg-9">
-<input type="text" id="signupform-username" class="form-control" name="SignupForm[username]" autofocus aria-required="true">
-<div class="invalid-feedback "></div>
+    <div class="col-md-12">
+        <div class="form-group row field-signupform-username required">
+          <label class="col-md-4 col-lg-3" for="signupform-username"
+            >Tên đăng nhập</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <input
+              type="text"
+              id="signupform-username"
+              class="form-control"
+              formControlName="username"
+            />
+            <div class="invalid-feedback" *ngIf="formGroup.get('username').touched && formGroup.get('username').errors?.required">
+              <span>Username là bắt buộc</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row field-signupform-name required">
+          <label class="col-md-4 col-lg-3" for="signupform-name"
+            >Họ &amp; tên</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <input
+              type="text"
+              id="signupform-name"
+              class="form-control"
+              formControlName="fullName"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+        <!-- <div class="form-group row field-signupform-phone required">
+          <label class="col-md-4 col-lg-3" for="signupform-phone"
+            >Số điện thoại</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <input
+              type="text"
+              id="signupform-phone"
+              class="form-control"
+              name="SignupForm[phone]"
+              aria-required="true"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div> -->
+        <div class="form-group row field-signupform-email required">
+          <label class="col-md-4 col-lg-3" for="signupform-email">Email</label>
+          <div class="col-md-8 col-lg-9">
+            <input
+              type="text"
+              id="signupform-email"
+              class="form-control"
+              formControlName="email"
+            />
+            <div class="invalid-feedback" *ngIf="formGroup.get('email').touched && formGroup.get('email').errors?.required">
+              <span>Email là bắt buộc</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row field-signupform-password required">
+          <label class="col-md-4 col-lg-3" for="signupform-password"
+            >Mật khẩu đăng nhập</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <input
+              type="password"
+              id="signupform-password"
+              class="form-control"
+              formControlName="password"
+            />
+            <div class="invalid-feedback" *ngIf="formGroup.get('password').touched && formGroup.get('password').errors?.required">
+              <span>Mật khẩu là bắt buộc</span>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row field-signupform-passwordrepeat">
+          <label class="col-md-4 col-lg-3" for="signupform-passwordrepeat"
+            >Nhập lại mật khẩu</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <input
+              type="password"
+              id="signupform-passwordrepeat"
+              class="form-control"
+              formControlName="repassword"
+            />
+            <div class="invalid-feedback" *ngIf="formGroup.touched && formGroup.errors?.notMatch || formGroup.get('repassword').touched && formGroup.get('repassword').errors?.required">
+              <span>Mật khẩu không khớp</span>
+            </div>
+          </div>
+        </div>
 
-</div>
-</div>
-          <div class="form-group row field-signupform-name required">
-<label class="col-md-4 col-lg-3" for="signupform-name">Họ &amp; tên</label>
-<div class="col-md-8 col-lg-9">
-<input type="text" id="signupform-name" class="form-control" name="SignupForm[name]" aria-required="true">
-<div class="invalid-feedback "></div>
-
-</div>
-</div>            <div class="form-group row field-signupform-phone required">
-<label class="col-md-4 col-lg-3" for="signupform-phone">Số điện thoại</label>
-<div class="col-md-8 col-lg-9">
-<input type="text" id="signupform-phone" class="form-control" name="SignupForm[phone]" aria-required="true">
-<div class="invalid-feedback "></div>
-
-</div>
-</div>
-          <div class="form-group row field-signupform-email required">
-<label class="col-md-4 col-lg-3" for="signupform-email">Email</label>
-<div class="col-md-8 col-lg-9">
-<input type="text" id="signupform-email" class="form-control" name="SignupForm[email]" aria-required="true">
-<div class="invalid-feedback "></div>
-
-</div>
-</div>
-          <div class="form-group row field-signupform-password required">
-<label class="col-md-4 col-lg-3" for="signupform-password">Mật khẩu đăng nhập</label>
-<div class="col-md-8 col-lg-9">
-<input type="password" id="signupform-password" class="form-control" name="SignupForm[password]" aria-required="true">
-<div class="invalid-feedback "></div>
-
-</div>
-</div>
-          <div class="form-group row field-signupform-passwordrepeat">
-<label class="col-md-4 col-lg-3" for="signupform-passwordrepeat">Nhập lại mật khẩu</label>
-<div class="col-md-8 col-lg-9">
-<input type="password" id="signupform-passwordrepeat" class="form-control" name="SignupForm[passwordRepeat]">
-<div class="invalid-feedback "></div>
-
-</div>
-</div>
-
-<div class="form-group row field-signupform-house_number">
-<label class="col-md-4 col-lg-3" for="signupform-house_number">Số nhà</label>
-<div class="col-md-8 col-lg-9">
-<input type="text" id="signupform-house_number" class="form-control" name="SignupForm[house_number]" maxlength="255">
-<div class="invalid-feedback "></div>
-
-</div>
-</div><div class="form-group row field-signupform-street_name">
-<label class="col-md-4 col-lg-3" for="signupform-street_name">Tên đường</label>
-<div class="col-md-8 col-lg-9">
-<input type="text" id="signupform-street_name" class="form-control" name="SignupForm[street_name]" maxlength="255">
-<div class="invalid-feedback "></div>
-
-</div>
-</div>
-<div class="form-group row field-signupform-province_id required">
-  <label class="col-md-4 col-lg-3" for="signupform-province_id">Tỉnh / thành phố</label>
-  <div class="col-md-8 col-lg-9">
-  <select id="signupform-province_id" class="form-control" name="SignupForm[province_id]" aria-required="true" data-s2-options="s2options_e9bc2761" data-krajee-select2="select2_c0b3f1b1" style="width: 100%; height: 40px;">
-  <option value="">Chọn tỉnh / thành phố</option>
-  <option value="89">Tỉnh An Giang</option>
-  <option value="77">Tỉnh Bà Rịa - Vũng Tàu</option>
-  <option value="24">Tỉnh Bắc Giang</option>
-  <option value="06">Tỉnh Bắc Kạn</option>
-  <option value="95">Tỉnh Bạc Liêu</option>
-  <option value="27">Tỉnh Bắc Ninh</option>
-  <option value="83">Tỉnh Bến Tre</option>
-  <option value="74">Tỉnh Bình Dương</option>
-  <option value="52">Tỉnh Bình Định</option>
-  <option value="70">Tỉnh Bình Phước</option>
-  <option value="60">Tỉnh Bình Thuận</option>
-  <option value="96">Tỉnh Cà Mau</option>
-  <option value="92">Thành phố Cần Thơ</option>
-  <option value="04">Tỉnh Cao Bằng</option>
-  <option value="48">Thành phố Đà Nẵng</option>
-  <option value="66">Tỉnh Đắk Lắk</option>
-  <option value="67">Tỉnh Đắk Nông</option>
-  <option value="11">Tỉnh Điện Biên</option>
-  <option value="75">Tỉnh Đồng Nai</option>
-  <option value="87">Tỉnh Đồng Tháp</option>
-  <option value="64">Tỉnh Gia Lai</option>
-  <option value="02">Tỉnh Hà Giang</option>
-  <option value="35">Tỉnh Hà Nam</option>
-  <option value="01">Thành phố Hà Nội</option>
-  <option value="42">Tỉnh Hà Tĩnh</option>
-  <option value="30">Tỉnh Hải Dương</option>
-  <option value="31">Thành phố Hải Phòng</option>
-  <option value="93">Tỉnh Hậu Giang</option>
-  <option value="79">Thành phố Hồ Chí Minh</option>
-  <option value="17">Tỉnh Hoà Bình</option>
-  <option value="33">Tỉnh Hưng Yên</option>
-  <option value="56">Tỉnh Khánh Hòa</option>
-  <option value="91">Tỉnh Kiên Giang</option>
-  <option value="62">Tỉnh Kon Tum</option>
-  <option value="12">Tỉnh Lai Châu</option>
-  <option value="68">Tỉnh Lâm Đồng</option>
-  <option value="20">Tỉnh Lạng Sơn</option>
-  <option value="10">Tỉnh Lào Cai</option>
-  <option value="80">Tỉnh Long An</option>
-  <option value="36">Tỉnh Nam Định</option>
-  <option value="40">Tỉnh Nghệ An</option>
-  <option value="37">Tỉnh Ninh Bình</option>
-  <option value="58">Tỉnh Ninh Thuận</option>
-  <option value="25">Tỉnh Phú Thọ</option>
-  <option value="54">Tỉnh Phú Yên</option>
-  <option value="44">Tỉnh Quảng Bình</option>
-  <option value="49">Tỉnh Quảng Nam</option>
-  <option value="51">Tỉnh Quảng Ngãi</option>
-  <option value="22">Tỉnh Quảng Ninh</option>
-  <option value="45">Tỉnh Quảng Trị</option>
-  <option value="94">Tỉnh Sóc Trăng</option>
-  <option value="14">Tỉnh Sơn La</option>
-  <option value="72">Tỉnh Tây Ninh</option>
-  <option value="34">Tỉnh Thái Bình</option>
-  <option value="19">Tỉnh Thái Nguyên</option>
-  <option value="38">Tỉnh Thanh Hóa</option>
-  <option value="46">Tỉnh Thừa Thiên Huế</option>
-  <option value="82">Tỉnh Tiền Giang</option>
-  <option value="84">Tỉnh Trà Vinh</option>
-  <option value="08">Tỉnh Tuyên Quang</option>
-  <option value="86">Tỉnh Vĩnh Long</option>
-  <option value="26">Tỉnh Vĩnh Phúc</option>
-  <option value="15">Tỉnh Yên Bái</option>
-  </select>
-  <div class="invalid-feedback "></div>
-
+        <div class="form-group row field-signupform-house_number">
+          <label class="col-md-4 col-lg-3" for="signupform-house_number"
+            >Địa chỉ</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <input
+              type="text"
+              id="signupform-house_number"
+              class="form-control"
+              formControlName="diaChi"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+        <!-- <div class="form-group row field-signupform-street_name">
+          <label class="col-md-4 col-lg-3" for="signupform-street_name"
+            >Tên đường</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <input
+              type="text"
+              id="signupform-street_name"
+              class="form-control"
+              name="SignupForm[street_name]"
+              maxlength="255"
+            />
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+        <div class="form-group row field-signupform-province_id required">
+          <label class="col-md-4 col-lg-3" for="signupform-province_id"
+            >Tỉnh / thành phố</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <select
+              id="signupform-province_id"
+              class="form-control"
+              name="SignupForm[province_id]"
+              aria-required="true"
+              data-s2-options="s2options_e9bc2761"
+              data-krajee-select2="select2_c0b3f1b1"
+              style="width: 100%; height: 40px"
+            >
+              <option value="">Chọn tỉnh / thành phố</option>
+              <option value="89">Tỉnh An Giang</option>
+              <option value="77">Tỉnh Bà Rịa - Vũng Tàu</option>
+              <option value="24">Tỉnh Bắc Giang</option>
+              <option value="06">Tỉnh Bắc Kạn</option>
+              <option value="95">Tỉnh Bạc Liêu</option>
+              <option value="27">Tỉnh Bắc Ninh</option>
+              <option value="83">Tỉnh Bến Tre</option>
+              <option value="74">Tỉnh Bình Dương</option>
+              <option value="52">Tỉnh Bình Định</option>
+              <option value="70">Tỉnh Bình Phước</option>
+              <option value="60">Tỉnh Bình Thuận</option>
+              <option value="96">Tỉnh Cà Mau</option>
+              <option value="92">Thành phố Cần Thơ</option>
+              <option value="04">Tỉnh Cao Bằng</option>
+              <option value="48">Thành phố Đà Nẵng</option>
+              <option value="66">Tỉnh Đắk Lắk</option>
+              <option value="67">Tỉnh Đắk Nông</option>
+              <option value="11">Tỉnh Điện Biên</option>
+              <option value="75">Tỉnh Đồng Nai</option>
+              <option value="87">Tỉnh Đồng Tháp</option>
+              <option value="64">Tỉnh Gia Lai</option>
+              <option value="02">Tỉnh Hà Giang</option>
+              <option value="35">Tỉnh Hà Nam</option>
+              <option value="01">Thành phố Hà Nội</option>
+              <option value="42">Tỉnh Hà Tĩnh</option>
+              <option value="30">Tỉnh Hải Dương</option>
+              <option value="31">Thành phố Hải Phòng</option>
+              <option value="93">Tỉnh Hậu Giang</option>
+              <option value="79">Thành phố Hồ Chí Minh</option>
+              <option value="17">Tỉnh Hoà Bình</option>
+              <option value="33">Tỉnh Hưng Yên</option>
+              <option value="56">Tỉnh Khánh Hòa</option>
+              <option value="91">Tỉnh Kiên Giang</option>
+              <option value="62">Tỉnh Kon Tum</option>
+              <option value="12">Tỉnh Lai Châu</option>
+              <option value="68">Tỉnh Lâm Đồng</option>
+              <option value="20">Tỉnh Lạng Sơn</option>
+              <option value="10">Tỉnh Lào Cai</option>
+              <option value="80">Tỉnh Long An</option>
+              <option value="36">Tỉnh Nam Định</option>
+              <option value="40">Tỉnh Nghệ An</option>
+              <option value="37">Tỉnh Ninh Bình</option>
+              <option value="58">Tỉnh Ninh Thuận</option>
+              <option value="25">Tỉnh Phú Thọ</option>
+              <option value="54">Tỉnh Phú Yên</option>
+              <option value="44">Tỉnh Quảng Bình</option>
+              <option value="49">Tỉnh Quảng Nam</option>
+              <option value="51">Tỉnh Quảng Ngãi</option>
+              <option value="22">Tỉnh Quảng Ninh</option>
+              <option value="45">Tỉnh Quảng Trị</option>
+              <option value="94">Tỉnh Sóc Trăng</option>
+              <option value="14">Tỉnh Sơn La</option>
+              <option value="72">Tỉnh Tây Ninh</option>
+              <option value="34">Tỉnh Thái Bình</option>
+              <option value="19">Tỉnh Thái Nguyên</option>
+              <option value="38">Tỉnh Thanh Hóa</option>
+              <option value="46">Tỉnh Thừa Thiên Huế</option>
+              <option value="82">Tỉnh Tiền Giang</option>
+              <option value="84">Tỉnh Trà Vinh</option>
+              <option value="08">Tỉnh Tuyên Quang</option>
+              <option value="86">Tỉnh Vĩnh Long</option>
+              <option value="26">Tỉnh Vĩnh Phúc</option>
+              <option value="15">Tỉnh Yên Bái</option>
+            </select>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+        <div class="form-group row field-signupform-district_id required">
+          <label class="col-md-4 col-lg-3" for="signupform-district_id"
+            >Quận / huyện</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <select
+              id="signupform-district_id"
+              class="form-control"
+              name="SignupForm[district_id]"
+              aria-required="true"
+              data-s2-options="s2options_e9bc2761"
+              data-krajee-select2="select2_55135787"
+              style="width: 100%; height: 40px"
+            >
+              <option value="">Chọn quận / huyện</option>
+            </select>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>
+        <div class="form-group row field-signupform-ward_id">
+          <label class="col-md-4 col-lg-3" for="signupform-ward_id"
+            >Phường / xã</label
+          >
+          <div class="col-md-8 col-lg-9">
+            <select
+              id="signupform-ward_id"
+              class="form-control"
+              name="SignupForm[ward_id]"
+              data-s2-options="s2options_e9bc2761"
+              data-krajee-select2="select2_0b907641"
+              style="width: 100%; height: 40px"
+            >
+              <option value="">Chọn phường / xã</option>
+            </select>
+            <div class="invalid-feedback"></div>
+          </div>
+        </div>-->
+        <div class="d-flex justify-content-center">
+          <button
+            type="submit"
+            class="btn btn-success w-100"
+            name="signup-button"
+            (click)="dangKy()"
+          >
+            Tạo tài khoản
+          </button>
+        </div>
+    </div>
   </div>
-  </div><div class="form-group row field-signupform-district_id required">
-  <label class="col-md-4 col-lg-3" for="signupform-district_id">Quận / huyện</label>
-  <div class="col-md-8 col-lg-9">
- <select id="signupform-district_id" class="form-control" name="SignupForm[district_id]" aria-required="true" data-s2-options="s2options_e9bc2761" data-krajee-select2="select2_55135787" style="width: 100%; height: 40px; ">
-  <option value="">Chọn quận / huyện</option>
-  </select>
-  <div class="invalid-feedback "></div>
-
-  </div>
-  </div><div class="form-group row field-signupform-ward_id">
-  <label class="col-md-4 col-lg-3" for="signupform-ward_id">Phường / xã</label>
-  <div class="col-md-8 col-lg-9">
-  <select id="signupform-ward_id" class="form-control" name="SignupForm[ward_id]" data-s2-options="s2options_e9bc2761" data-krajee-select2="select2_0b907641" style="width: 100%; height: 40px;">
-  <option value="">Chọn phường / xã</option>
-  </select>
-  <div class="invalid-feedback "></div>
-
-  </div>
-  </div>
-              <div class="d-flex justify-content-center">
-                  <button type="submit" class="btn btn-success w-100" name="signup-button">Tạo tài khoản</button>            </div>
-
-              </form>        </div>
-      </div>
-  </div>
+</div>

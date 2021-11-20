@@ -1,3 +1,5 @@
+import { SinhhocontapComponent } from './sinhhocontap/sinhhocontap.component';
+import { HistoryluyentapComponent } from './historyluyentap/historyluyentap.component';
 
 import { LoginComponent } from './admin/login/login.component';
 import { ResultComponent } from './result/result.component';
@@ -21,9 +23,11 @@ import { PhuHuynhHocSinhComponent } from './phu-huynh-hoc-sinh/phu-huynh-hoc-sin
 import { BanGiamHieuComponent } from './ban-giam-hieu/ban-giam-hieu.component';
 import { ThayCoGiaoComponent } from './thay-co-giao/thay-co-giao.component';
 import { WellcomeComponent } from './wellcome/wellcome.component';
+
 import { HocsinhComponent } from './hocsinh/hocsinh.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { TructuyenComponent } from './tructuyen/tructuyen.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' },
@@ -34,21 +38,25 @@ const routes: Routes = [
   {path: 'phu-huynh-hoc-sinh', component: PhuHuynhHocSinhComponent},
   {path: 'gioi-thieu', component: GioiThieuComponent},
   {path: 'lien-he', component: ContactComponent},
-  {path: 'toan-hoc', component: MathComponent},
-  {path: 'toan-hoc/on-tap/:ontapId', component: OntapComponent },
-  {path: 'vat-ly', component: PhysicsComponent},
-  {path: 'hoa-hoc', component: ChemistryComponent},
-  {path: 'tieng-anh', component: EnglishComponent},
-  {path: 'sinh-hoc', component: BiologicalComponent},
-  {path: 'lich-su', component: HistoryComponent},
-  {path: 'dia-ly', component: GeographyComponent},
-  {path: 'Giao-duc-cong-dan', component: CivicComponent},
+  {path: 'on-tap/:ontapId', component: OntapComponent },
+  // {path: 'vat-ly', component: PhysicsComponent},
+  // {path: 'hoa-hoc', component: ChemistryComponent},
+  // {path: 'tieng-anh', component: EnglishComponent},
+  // {path: 'sinh-hoc', component: BiologicalComponent},
+  // {path: 'lich-su', component: HistoryComponent},
+  // {path: 'dia-ly', component: GeographyComponent},
+  // {path: 'giao-duc-cong-dan', component: CivicComponent},
   {path: 'dang-ky', component: SignupComponent},
   {path: 'dang-nhap', component: SigninComponent},
-  {path: 'toan-hoc', component:MathComponent},
+  // {path: 'toan-hoc', component:MathComponent},
   {path: 'ket-qua', component:ResultComponent},
+  {path: 'day-hoc-truc-tuyen', component: TructuyenComponent },
+  {path: ':monHoc', component: MathComponent},
   {path: 'admin/login', component:LoginComponent},
   {path: 'detail/:detailId', component: DetailComponent },
+  {path: 'lich-su/luyen-tap/on-tap/:historyluyentapId', component: HistoryluyentapComponent },
+  {path: 'sinh-hoc/on-tap', component: SinhhocontapComponent },
+
   // {path: 'ontap/:ontapId', component: OntapComponent },
   {path: 'start-test/:starttestId', component: StarttestComponent },
   {path: 'luyen-tap/:levelId', component: LuyentapComponent }

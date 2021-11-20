@@ -4,7 +4,7 @@
           <img src="https://media.eduvietnam.vn/images/2021/06/07/52gwT_8KOkU-do4aVFB6FFaGCiRjg-Lk.png" class="w-100">
       </div>
       <div class="col-md-7 ">
-          <h3 class="my-4">Tính đơn điệu(CB)</h3>
+          <h3 class="my-4">{{chuDeDetail?.chuong?.ten}}</h3>
           <table class="table table-stripped dondieu">
               <tr class="dondieu">
                   <td>Thời gian làm bài</td>
@@ -12,11 +12,11 @@
               </tr>
               <tr class="dondieu">
                   <td>Môn học</td>
-                  <td>Toán </td>
+                  <td>{{chuDeDetail?.monhoc?.ten}} </td>
               </tr>
               <tr class="dondieu">
                   <td>Chuyên đề</td>
-                  <td>TÍNH ĐƠN ĐIỆU</td>
+                  <td>{{chuDeDetail?.ten}}</td>
               </tr>
 
               <tr class="dondieu">
@@ -32,9 +32,12 @@
                  class="btn btn-success w-100" data-method="post">Bắt đầu làm bài</a>
           </div> -->
           <div class="d-none d-md-flex">
-            <a href="/toan-hoc/on-tap/1"
+            <a href="/on-tap/{{chuDeDetail._id}}"
                      class="btn btn-outline-success w-100 mr-3"  style=" margin-right: 20px;
                     " data-method="post">Ôn lại lý thuyết</a>
+                     <a href="/luyen-tap/{{chuDeDetail._id}}"
+                     class="btn btn-outline-success w-100 mr-3"  style=" margin-right: 20px;
+                    " data-method="post">Bài tập luyện tập</a>
                                   <a href="/start-test/1"
                  class="btn btn-success w-100" data-method="post">Bắt đầu làm bài</a>
           </div>

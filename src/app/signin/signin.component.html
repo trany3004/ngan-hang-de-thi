@@ -1,53 +1,122 @@
 <div class="site-login container">
-  <h1 class="title text-center my-3">Vie Education - Đăng nhập</h1>
+  <h1 class="title text-center my-3">VN Education - Đăng nhập</h1>
 
   <p></p>
 
   <div class="row justify-content-center">
-      <div class="col-lg-6">
-          <form id="login-form" action="/site/login" method="post">
-<input type="hidden" name="_csrf-frontend" value="967KD7Fl304laLiB37rI-Vkn28H36LOD7f6t9mTbtTnB6LxZwCa0ewgb1LSqyr7ULVaps8OjxPTAx-OYMq6YcA==">
-          <div class="form-group field-loginform-username required">
-<label for="loginform-username">Tên đăng nhập</label>
-<input type="text" id="loginform-username" class="form-control" name="LoginForm[username]" autofocus aria-required="true">
+    <div class="col-lg-6">
+      <form [formGroup]="formGroup">
+        <div class="form-group field-loginform-username required">
+          <label for="loginform-username">Tên đăng nhập</label>
+          <input
+            type="text"
+            id="loginform-username"
+            class="form-control"
+            name="LoginForm[username]"
+            autofocus
+            aria-required="true"
+            formControlName="username"
+            [ngClass]="{ 'is-invalid': formGroup.controls['username'].invalid }"
+          />
 
-<div class="invalid-feedback"></div>
-</div>
-          <div class="form-group field-loginform-password required">
-<label for="loginform-password">Mật khẩu</label>
-<input type="password" id="loginform-password" class="form-control" name="LoginForm[password]" value="" aria-required="true">
+          <div class="invalid-feedback" *ngIf="formGroup.controls['username'].touched
+           && formGroup.controls['username'].invalid">
+          <span>Username bắt buộc</span></div>
+        </div>
+        <div class="form-group field-loginform-password required">
+          <label for="loginform-password">Mật khẩu</label>
+          <input
+            type="password"
+            id="loginform-password"
+            class="form-control"
+            name="LoginForm[password]"
+            value=""
+            aria-required="true"
+            formControlName="password"
+            [ngClass]="{ 'is-invalid': formGroup.controls['password'].invalid }"
+          />
 
-<div class="invalid-feedback"></div>
-</div>
-          <div class="form-group field-loginform-rememberme">
-<div class="custom-control custom-checkbox">
-<input type="hidden" name="LoginForm[rememberMe]" value="0"><input type="checkbox" id="loginform-rememberme" class="custom-control-input" name="LoginForm[rememberMe]" value="1" checked>
-<label class="custom-control-label" for="loginform-rememberme">Nhớ đăng nhập</label>
-<div class="invalid-feedback"></div>
-
-</div>
-</div>
-          <div class="my-2">
-              Nếu bạn quên mật mẩu, <a class="link" href="/site/request-password-reset">lấy lại mật khẩu </a>.
+          <div class="invalid-feedback" *ngIf="formGroup.controls['password'].touched
+          && formGroup.controls['password'].invalid">
+          <span>Mật khẩu bắt buộc</span>
+        </div>
+        </div>
+        <div class="form-group field-loginform-rememberme">
+          <div class="custom-control custom-checkbox">
+            <input type="hidden" name="LoginForm[rememberMe]" value="0" /><input
+              type="checkbox"
+              id="loginform-rememberme"
+              class="custom-control-input"
+              name="LoginForm[rememberMe]"
+              value="1"
+              checked
+            />
+            <label class="custom-control-label" for="loginform-rememberme"
+              >Nhớ đăng nhập</label
+            >
+            <div class="invalid-feedback"></div>
           </div>
-          <div class="mt-2 mb-4">
-              Nếu chưa có tài khoản, <a class="link" href="/site/signup">đăng ký ngay! </a>                </div>
+        </div>
+        <div class="my-2">
+          Nếu bạn quên mật mẩu,
+          <a class="link" href="/site/request-password-reset"
+            >lấy lại mật khẩu </a
+          >.
+        </div>
+        <div class="mt-2 mb-4">
+          Nếu chưa có tài khoản,
+          <a class="link" href="/site/signup">đăng ký ngay! </a>
+        </div>
 
-          <div class="form-group text-center d-flex flex-grow-1 w-100">
-              <button type="submit" class="btn btn-success w-100" name="login-button">Đăng nhập</button>                </div>
-
-          </form>
-          <div class="d-flex align-items-center my-4">
-              <div style="height: 1px; background-color: #ddd" class="flex-grow-1"></div>
-              <span style="color: gray" class="mx-3">Hoặc</span>
-              <div style="height: 1px; background-color: #ddd" class="flex-grow-1"></div>
-          </div>
-          <button class="btn text-center w-100 mb-4 d-flex align-items-center justify-content-center" style="background-color: #176FE4; color: #fff" onclick="logInWithFacebook()">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-              </svg>
-              <span class="ml-3">Đăng nhập bằng facebook</span>
+        <div class="form-group text-center d-flex flex-grow-1 w-100">
+          <button
+            type="submit"
+            class="btn btn-success w-100"
+            name="login-button"
+            (click)="dangNhap()"
+          >
+            Đăng nhập
           </button>
+        </div>
+      </form>
+      <div class="d-flex align-items-center my-4">
+        <div
+          style="height: 1px; background-color: #ddd"
+          class="flex-grow-1"
+        ></div>
+        <span style="color: gray" class="mx-3">Hoặc</span>
+        <div
+          style="height: 1px; background-color: #ddd"
+          class="flex-grow-1"
+        ></div>
       </div>
+      <button
+        class="
+          btn
+          text-center
+          w-100
+          mb-4
+          d-flex
+          align-items-center
+          justify-content-center
+        "
+        style="background-color: #176fe4; color: #fff"
+        (click)="submitLogin()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="16"
+          fill="currentColor"
+          class="bi bi-facebook"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
+          />
+        </svg>
+        <span class="ml-3">Đăng nhập bằng facebook</span>
+      </button>
+    </div>
   </div>
 </div>

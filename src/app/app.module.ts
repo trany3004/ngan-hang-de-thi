@@ -1,7 +1,5 @@
 import { NgModule, Component } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { MathjaxModule } from 'mathjax-angular';
-
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +31,17 @@ import { LuyentapComponent } from './luyentap/luyentap.component';
 import { StarttestComponent } from './starttest/starttest.component';
 import { ResultComponent } from './result/result.component';
 import { LoginComponent } from './admin/login/login.component';
-
+import { HistorydetailComponent } from './historydetail/historydetail.component';
+import { HistoryluyentapComponent } from './historyluyentap/historyluyentap.component';
+import { MathjaxComponent } from './mathjax/mathjax.component';
+import { SinhhocontapComponent } from './sinhhocontap/sinhhocontap.component';
+import { MathModule } from './math/math.module';
+import {HttpClientModule} from '@angular/common/http';
+import { MatRadioModule } from "@angular/material/radio";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { TructuyenComponent } from './tructuyen/tructuyen.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -63,6 +71,11 @@ import { LoginComponent } from './admin/login/login.component';
     StarttestComponent,
     ResultComponent,
     LoginComponent,
+    HistorydetailComponent,
+    HistoryluyentapComponent,
+    MathjaxComponent,
+    SinhhocontapComponent,
+    TructuyenComponent
 
 
 
@@ -73,10 +86,16 @@ import { LoginComponent } from './admin/login/login.component';
     FormsModule,
     ReactiveFormsModule,
     NgxCaptchaModule,
+    HttpClientModule,
+    MatRadioModule,
+    MatCheckboxModule,
+    MathModule.forRoot(),
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(),
+    // MathjaxModule.forRoot(
 
-    MathjaxModule.forRoot(
-
-    )
+    // )
+    // KatexModule
   ],
   providers: [],
   bootstrap: [AppComponent]

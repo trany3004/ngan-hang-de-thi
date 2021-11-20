@@ -13,4 +13,12 @@ export class MenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  noLogin() {
+    return !localStorage.getItem('token')
+  }
+
+  username() {
+    return JSON.parse(localStorage.getItem('user')).username
+  }
+
 }

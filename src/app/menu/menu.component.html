@@ -83,13 +83,71 @@
     >
     <a href="/dang-ky" class="btn btn-success">Đăng ký</a>
   </div>
-  <div
+
+  <div class="dropdown" *ngIf="!noLogin()">
+    <div style="color: #b5b5c3 !important" id="dropdownMenu2"
+    data-bs-toggle="dropdown"
+    class="dropdown-toggle"
+    aria-expanded="false">
+      Hi,
+      <span
+        style="
+          background-color: #c9f7f5;
+          color: #1bc5bd;
+          padding: 5px;
+          border-radius: 5px;
+        "
+        >{{ username() }}</span
+      >
+    </div>
+    <!-- <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenu2"
+      data-bs-toggle="dropdown"
+      aria-expanded="false"
+    >
+    <div style="color: #b5b5c3 !important" id="dropdownMenu2"
+    data-bs-toggle="dropdown"
+    class="dropdown-toggle"
+    aria-expanded="false">
+      Hi,
+      <span
+        style="
+          background-color: #c9f7f5;
+          color: #1bc5bd;
+          padding: 5px;
+          border-radius: 5px;
+        "
+        >{{ username() }}</span
+      >
+    </div>
+    </button> -->
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <li></li>
+      <li>
+        <button class="dropdown-item" type="button" (click)="logout()">Đăng xuất</button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <div
     class="account not-logged-in position-relative ml-auto"
     *ngIf="!noLogin()"
   >
-    <div style="color: #B5B5C3 !important;">Hi, <span style="    background-color: #C9F7F5;
-      color: #1BC5BD;
-      padding: 5px;
-      border-radius: 5px;">{{ username() }}</span></div>
-  </div>
-</div>
+    <div style="color: #b5b5c3 !important">
+      Hi,
+      <span
+        style="
+          background-color: #c9f7f5;
+          color: #1bc5bd;
+          padding: 5px;
+          border-radius: 5px;
+        "
+        >{{ username() }}</span
+      >
+    </div>
+    </div> -->
+    </div>
+
+

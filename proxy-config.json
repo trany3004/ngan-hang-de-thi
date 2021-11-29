@@ -7,8 +7,8 @@
         "target": "http://localhost:3000",
         "secure": false
     },
-    "/uploads": {
-        "target": "http://103.101.163.72:3000",
+    "/upload": {
+        "target": "http://localhost:3000",
         "secure": false
     }
 }

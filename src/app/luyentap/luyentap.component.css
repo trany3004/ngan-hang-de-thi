@@ -1,4 +1,10 @@
 .luyentap{
  justify-content: center;
 }
+.dap-an.invalid {
+  color: red
+}
+.dap-an.valid {
+  color: #1bc5bd;
+}
 

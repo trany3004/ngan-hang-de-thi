@@ -42,6 +42,8 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { TructuyenComponent } from './tructuyen/tructuyen.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
 
 @NgModule({
   declarations: [
@@ -92,12 +94,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MathModule.forRoot(),
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(),
+    ReactiveFormsModule,
+    DragDropModule,
     // MathjaxModule.forRoot(
 
     // )
     // KatexModule
   ],
-  providers: [],
+  providers: [
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

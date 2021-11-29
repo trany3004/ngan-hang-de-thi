@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { BaseService } from '../services/base.service';
 
 @Component({
   selector: 'app-menu',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(public router: Router) { }
+  constructor(public router: Router, private auth: BaseService) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +20,13 @@ export class MenuComponent implements OnInit {
 
   username() {
     return JSON.parse(localStorage.getItem('user')).username
+  }
+
+  logout() {
+    this.auth.logout();
+    localStorage.removeItem('user')
+    localStorage.removeItem('token')
+    document.location.reload();
   }
 
 }

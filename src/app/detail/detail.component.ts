@@ -24,6 +24,10 @@ chuDeDetail: any = {}
       this.chuDeDetail = chude && chude.length ? chude[0] : null;
     })
 
+    
+
+
+
 
     //get detail => 1 => id: 1, title: TOan dai so,
   }

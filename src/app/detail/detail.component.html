@@ -1,7 +1,12 @@
 <div class="container py-3 py-md-5">
   <div class="row justify-content-center px-3 align-items-center">
       <div class="col-md-5">
-          <img src="https://media.eduvietnam.vn/images/2021/06/07/52gwT_8KOkU-do4aVFB6FFaGCiRjg-Lk.png" class="w-100">
+        <img
+        src="{{chuDeDetail.image || 'https://media.eduvietnam.vn/images/2021/06/07/52gwT_8KOkU-do4aVFB6FFaGCiRjg-Lk.png'}}"
+        alt=""
+        width="100%"
+      />
+          <!-- <img src={{chuDeDetail?.image }} class="w-100"/> -->
       </div>
       <div class="col-md-7 ">
           <h3 class="my-4">{{chuDeDetail?.chuong?.ten}}</h3>
@@ -41,6 +46,5 @@
                                   <a href="/start-test/1"
                  class="btn btn-success w-100" data-method="post">Bắt đầu làm bài</a>
           </div>
-      </div>
-  </div>
+</div>
 </div>

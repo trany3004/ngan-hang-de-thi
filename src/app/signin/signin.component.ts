@@ -74,4 +74,16 @@ export class SigninComponent implements OnInit {
   showSuccess() {
     this.toastr.success('Đăng nhập thành công', '');
   }
+  msToTime(time) {
+    let milliseconds = Math.floor((time % 1000) / 100);
+    let seconds = Math.floor((time / 1000) % 60) as number | string;
+    let minutes = Math.floor((time / (1000 * 60)) % 60) as number | string;
+    let hours = Math.floor((time / (1000 * 60 * 60)) % 24) as number | string;
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+    return hours + ":" + minutes + ":" + seconds;
+ }
 }

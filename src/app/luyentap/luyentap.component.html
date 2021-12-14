@@ -88,7 +88,11 @@
           class="row"
           *ngFor="let dapAn of cauHoiDetail.dapAn; let i = index"
         >
-          <div class="col-md-12" cdkDrag style="border: 1px solid #ccc; border-radius: 5px; height: 50px">
+          <div
+            class="col-md-12"
+            cdkDrag
+            style="border: 1px solid #ccc; border-radius: 5px; height: 50px"
+          >
             <div
               [appMath]="dapAn.noidung"
               class="dap-an"

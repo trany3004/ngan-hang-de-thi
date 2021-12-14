@@ -10,3 +10,51 @@
     margin-right: .5rem;
     margin-bottom: .5rem;
 }
+.avatar {
+  width: 150px;
+}
+.avatar img{
+  width: 100%;
+}
+
+.quiz-answer-sheet a{
+  border-radius: 50%;
+    border: 1px solid #EBEBEC;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #404040;
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+}
+
+.btnReport {
+  border: none;
+  background: #fff;
+}
+.ten {
+  padding: 20px;
+}
+
+.luyentap{
+  justify-content: center;
+ }
+ .dap-an.invalid {
+   color: red
+ }
+ .dap-an.valid {
+   color: #3d4949;
+ }
+
+ .rightAnwer {
+  background: #1bc5bd;
+
+
+ }
+ .wrongAnwer {
+  background: red;
+
+
+ }

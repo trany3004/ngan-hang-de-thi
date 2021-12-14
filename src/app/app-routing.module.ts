@@ -58,7 +58,7 @@ const routes: Routes = [
   {path: 'sinh-hoc/on-tap', component: SinhhocontapComponent },
 
   // {path: 'ontap/:ontapId', component: OntapComponent },
-  {path: 'start-test/:starttestId', component: StarttestComponent },
+  {path: 'bat-dau-lam-bai/:starttestId', component: StarttestComponent },
   {path: 'luyen-tap/:levelId', component: LuyentapComponent }
 ];
 

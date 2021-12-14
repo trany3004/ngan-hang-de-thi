@@ -24,7 +24,7 @@ chuDeDetail: any = {}
       this.chuDeDetail = chude && chude.length ? chude[0] : null;
     })
 
-    
+
 
 
 

@@ -1,125 +1,229 @@
 <div class="main-content">
-  <div class="container">
-                          </div>
+  <div class="container"></div>
 
-<div class="container result-overview">
-<h4 class="my-4">Kết quả</h4>
+  <div class="container result-overview">
+    <h4 class="my-4">Kết quả</h4>
 
-<div class="student-info text-center">
-<div class="d-flex justify-content-center mb-3">
-<div class="avatar" style="background-image: url('/images/student.png')">Hình học sinh backend</div>
-</div>
-<b>lấy user từ backend</b>
-</div>
-<div class="quiz-title text-center mt-3">
-<h6 class="alert alert-success d-flex d-inline-flex">
-Tên chương đang làm        </h6>
-</div>
+    <div class="student-info text-center">
+      <div class="d-flex justify-content-center mb-3">
+        <div class="avatar">
+          <img src="/assets/img/cute.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="quiz-title text-center mt-3">
+      <h6 class="d-flex d-inline-flex">
+        <h5 class="ten alert alert-success ">{{ chude?.ten }}</h5>
+      </h6>
+    </div>
 
-<div class="quiz-share d-flex justify-content-center align-items-center my-3">
-<div class="mr-3">Chia sẻ: </div>
-<button id="shareBtn" class="button-reset mr-3">
-<img src="https://eduvietnam.vn/images/facebook-icon.png" alt="" height="50px">
-</button>
-<button id="shareGmailBtn" class="button-reset mr-3">
-<img src="https://eduvietnam.vn/images/gmail.png" alt="" height="50px">
-</button>
-<button class="button-reset" id="copy" data-clipboard-text="https://eduvietnam.vn/site/share-result?quizAssignmentId=2097&t=1630121882&hash=4580e3b75ed71c89baba85f2c08f88c2"
->
-<input type="text" class="d-none" value="https://eduvietnam.vn/site/share-result?quizAssignmentId=2097&t=1630121882&hash=4580e3b75ed71c89baba85f2c08f88c2" id="myInput">
-<img src="https://eduvietnam.vn/images/copy.png" alt="" height="40px">
-</button>
-</div>
+    <div *ngIf="result && result.cauhoi?.length && result.viewRole">
+      <div>
+        <div *ngFor="let element of result.cauhoi let i = index">
+          <div>
+            <div>Câu {{i+1}}:</div>
+            <div [appMath]="element.cauhoi"></div>
+          </div>
+          <div
+            style="width: 100%"
+            class="d-flex flex-wrap"
+            *ngIf="!element.isDrapDrop"
+          >
+            <div
+              *ngFor="let dapAn of element.dapAn; let y = index"
+              style="width: 50%"
+              class="d-flex"
+            >
+              <div *ngIf="!element.multipleAnswer">
+                <mat-radio-button
+                  [checked]="dapAn.selected"
+                  class="rdo"
+                  [disabled]="true"
+                  [ngClass]="{
+                    invalid: result.viewRole && dapAn.wrongAnswer,
+                    valid: result.viewRole && dapAn.rightAnswer
+                  }"
+                ></mat-radio-button>
+              </div>
+              <div *ngIf="element.multipleAnswer" style="padding-right: 16px">
+                <mat-checkbox [(ngModel)]="dapAn.selected" [disabled]="true"></mat-checkbox>
+              </div>
 
-<div class="row justify-content-center">
-<div class="col-md-4">
-<div class="alert alert-secondary text-center" role="alert">
-<p>Số câu đúng</p>
-<h3>backend </h3>
-</div>
-</div>
-<div class="col-md-4"><div class="alert alert-secondary text-center" role="alert">
-<p>Điểm</p>
-<h3 class="text-danger">backend</h3>
-</div></div>
-<div class="col-md-4"><div class="alert alert-secondary text-center" role="alert">
-<p>Thời gian làm bài</p>
-<h3>backend</h3>
-</div></div>
-</div>
+              <div
+                [appMath]="element.dapAn[y].noidung"
+                class="dap-an"
+                [ngClass]="{ invalid: result.viewRole && dapAn.wrongAnswer, valid: result.viewRole && dapAn.rightAnswer }"
+              ></div>
+            </div>
+          </div>
+          <div
+            style="width: 100%"
+            class="d-flex flex-wrap"
+            *ngIf="element.isDrapDrop"
+            cdkDropList
+            class="example-list"
+          >
+            <ng-container
+              class="row"
+              *ngFor="let dapAn of element.dapAn; let i = index"
+            >
+              <div
+                class="col-md-12"
+                cdkDrag
+                style="border: 1px solid #ccc; border-radius: 5px; height: 50px"
+              >
+                <div
+                  [appMath]="dapAn.noidung"
+                  class="dap-an"
+                  [ngClass]="{
+                    invalid: result.viewRole && dapAn.wrongAnswer,
+                    valid: result.viewRole && dapAn.rightAnswer
+                  }"
+                ></div>
+              </div>
+            </ng-container>
+          </div>
+          <div
+          *ngIf="result.viewRole"
+          style="
+            color: #155724;
+            background-color: #d4edda;
+            border-color: #c3e6cb;
+            padding: 20px;
+            border-radius: 10px;
+          "
+        >
+          <span
+            style="
+              padding: 0.5rem 1rem;
+              background-color: #f5f5f6;
+              border-radius: 5px;
+            "
+            >Giải thích đáp án</span
+          >
+          <div [appMath]="element.giaithich" style="margin-top: 10px"></div>
+        </div>
+        </div>
+      </div>
 
-<div class="container quiz-answer-sheet d-flex flex-wrap mb-3">
-  <a class="
-wrong "><span>1</span></a>
-      <a class="
-wrong "><span>2</span></a>
-      <a class="
-correct "><span>3</span></a>
-      <a class="
-wrong "><span>4</span></a>
-      <a class="
-correct "><span>5</span></a>
-      <a class="
-wrong "><span>6</span></a>
-      <a class="
-wrong "><span>7</span></a>
-      <a class="
-wrong "><span>8</span></a>
-      <a class="
-wrong "><span>9</span></a>
-      <a class="
-wrong "><span>10</span></a>
-<b>Màu đỏ hoặc xanh tuỳ vào câu tl đúng hay sai backend</b>
-</div>
 
-<button type="submit" class="btn btn-success px-lg-5 text-center" >
-  Xem lời giải
- </button>
+    </div>
+    <div *ngIf="!result || !result.viewRole" class="d-flex justify-content-center">
+      Tài khoản của bạn không thể xem được đáp án. Đăng ký tài khoản vip để xem được phần này
+    </div>
+
+    <div
+      class="quiz-share d-flex justify-content-center align-items-center my-3"
+    >
+      <div class="mr-3">Chia sẻ:</div>
+      <button id="shareBtn" class="button-reset mr-3">
+        <img
+          src="https://eduvietnam.vn/images/facebook-icon.png"
+          alt=""
+          height="50px"
+        />
+      </button>
+      <button id="shareGmailBtn" class="button-reset mr-3">
+        <img
+          src="https://eduvietnam.vn/images/gmail.png"
+          alt=""
+          height="50px"
+        />
+      </button>
+      <button
+        class="button-reset"
+        id="copy"
+        data-clipboard-text="https://eduvietnam.vn/site/share-result?quizAssignmentId=2097&t=1630121882&hash=4580e3b75ed71c89baba85f2c08f88c2"
+      >
+        <input
+          type="text"
+          class="d-none"
+          value="https://eduvietnam.vn/site/share-result?quizAssignmentId=2097&t=1630121882&hash=4580e3b75ed71c89baba85f2c08f88c2"
+          id="myInput"
+        />
+        <img src="https://eduvietnam.vn/images/copy.png" alt="" height="40px" />
+      </button>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <div class="alert alert-secondary text-center" role="alert">
+          <p>Số câu đúng</p>
+          <h3>{{result.numberOfRightAnswer}}</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="alert alert-secondary text-center" role="alert">
+          <p>Điểm</p>
+          <h3 class="text-danger">{{result.score}}</h3>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="alert alert-secondary text-center" role="alert">
+          <p>Thời gian làm bài</p>
+          <h3>{{msToTime()}}</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="container quiz-answer-sheet d-flex flex-wrap mb-3" *ngIf="result && result.cauhoi?.length && result.viewRole">
+      <a class="wrong" *ngFor="let cauhoi of result.cauhoi; let i = index" [ngClass]="{
+        'rightAnwer': cauhoi.rightAnwer,
+        'wrongAnwer': !cauhoi.rightAnwer
+      }">
+        <span>{{i+1}}</span></a>
+      </div>
 
 
- <!-- Modal -->
- <div class="modal fade" id="exampleModal" tabindex="-1" >
-   <div class="modal-dialog ">
-     <div class="modal-content">
+    <!-- <button type="submit" class="btn btn-success px-lg-5 text-center">
+      Xem lời giải
+    </button> -->
 
-
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1">
       <div class="modal-dialog">
         <div class="modal-content">
-        <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Nâng cấp tài khoản
-          vip</h5>
-        <button type="button" class="close" data-dismiss="modal"
-              aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Nâng cấp tài khoản vip
+                </h5>
+                <button
+                  type="button"
+                  class="close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                Bạn phải là <a href="">thành viên VIP</a> của Vie Edu mới được
+                xem tiếp đáp án và lời giải thích.
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-dismiss="modal"
+                >
+                  Hủy
+                </button>
+                <a href="/user/upgrade-account">
+                  <button
+                    type="button"
+                    class="btn btn-success"
+                    id="upgradeVipBtn"
+                  >
+                    Nâng cấp tài khoản Vip
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="modal-body">
-        Bạn phải là <a href="">thành viên VIP</a> của Vie Edu mới được xem tiếp
-        đáp án và lời giải thích.
-        </div>
-        <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          Hủy
-        </button>
-        <a href="/user/upgrade-account">
-          <button type="button" class="btn btn-success" id="upgradeVipBtn">
-              Nâng cấp tài khoản Vip
-          </button>
-        </a>
-        </div>
-        </div>
-        </div>
-
-   </div>
- </div>
-           </div>
-
-
-
-
-
-
-
-
-
-
+      </div>
+    </div>
+  </div>
+</div>

@@ -43,7 +43,7 @@ import { TructuyenComponent } from './tructuyen/tructuyen.component';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
-
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -96,6 +96,7 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     ToastrModule.forRoot(),
     ReactiveFormsModule,
     DragDropModule,
+    MatProgressBarModule
     // MathjaxModule.forRoot(
 
     // )

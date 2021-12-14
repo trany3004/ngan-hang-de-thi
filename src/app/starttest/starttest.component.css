@@ -15,3 +15,17 @@
   border: none;
   background: #fff;
 }
+.ten {
+  padding: 20px;
+}
+
+.luyentap{
+  justify-content: center;
+ }
+ .dap-an.invalid {
+   color: red
+ }
+ .dap-an.valid {
+   color: #1bc5bd;
+ }
+

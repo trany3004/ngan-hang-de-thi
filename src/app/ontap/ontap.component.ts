@@ -1,10 +1,13 @@
 import { ChuDeService } from './../services/chude.service';
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import {jsPDF} from 'jspdf';
+import html2canvas from 'html2canvas';
+import { Component, OnInit, ViewEncapsulation, ViewChild, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MathContent } from '../math/math-content';
 
 // import { MathContent } from '../math/math/content';
 import { ONTAPTOANHOC, ONTAPLICHSU, ONTAPVATLY, ONTAPSINHHOC, ONTAPHOAHOC} from './ontap';
+import * as printJS from 'print-js';
 
 @Component({
   selector: 'app-ontap',
@@ -34,7 +37,20 @@ export class OntapComponent implements OnInit {
     private route: ActivatedRoute,
     private chuDeService: ChuDeService
   ) { }
-
+  @ViewChild('content', {static: true}) el!: ElementRef<HTMLImageElement>;
+  pdf() {
+    html2canvas(this.el.nativeElement).then((canvas) => {
+      const imgData = canvas.toDataURL('image/jpeg');
+      const pdf = new jsPDF({
+        orientation: 'portrait',
+      });
+      const imageProps = pdf.getImageProperties(imgData);
+      const pdfw = pdf.internal.pageSize.getWidth();
+      const pdfh = (imageProps.height* pdfw)/ imageProps.width;
+      pdf.addImage(imgData, 'PNG', 0, 0, pdfw, pdfh);
+      pdf.save('education.pdf');
+    })
+  }
 
   ngOnInit(): void {
     console.log('ontapid >>', this.route.snapshot.params.ontapId)

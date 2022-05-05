@@ -3,7 +3,7 @@
     <li [class.active]="router.isActive('/welcome', true)">
       <a
         href="/"
-        class="d-flex flex-column align-items-center justify-content-center"
+        class="d-flex flex-column align-items-center justify-content-center home"
       >
         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         <span>Trang chủ</span>
@@ -13,7 +13,7 @@
       <a
         [routerLink]="['/hocsinh']"
         routerLinkActive="router-link-active"
-        class="d-flex flex-column align-items-center justify-content-center"
+        class="d-flex flex-column align-items-center justify-content-center home"
       >
         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         <span>Học sinh</span>
@@ -22,13 +22,13 @@
     <li [class.active]="router.isActive('/thay-co-giao', true)">
       <a
         href="/thay-co-giao"
-        class="d-flex flex-column align-items-center justify-content-center"
+        class="d-flex flex-column align-items-center justify-content-center home"
       >
         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         <span>Thầy/cô giáo</span>
       </a>
     </li>
-    <li [class.active]="router.isActive('/ban-giam-hieu', true)">
+    <!-- <li [class.active]="router.isActive('/ban-giam-hieu', true)">
       <a
         href="/ban-giam-hieu"
         class="d-flex flex-column align-items-center justify-content-center"
@@ -36,8 +36,8 @@
         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         <span>Ban giám hiệu</span>
       </a>
-    </li>
-    <li [class.active]="router.isActive('/phu-huynh-hoc-sinh', true)">
+    </li> -->
+    <!-- <li [class.active]="router.isActive('/phu-huynh-hoc-sinh', true)">
       <a
         href="/phu-huynh-hoc-sinh"
         class="d-flex flex-column align-items-center justify-content-center"
@@ -45,14 +45,14 @@
         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         <span>PHHS</span>
       </a>
-    </li>
+    </li> -->
     <li
       [class.active]="router.isActive('/gioi-thieu', true)"
       class="d-none d-xl-block"
     >
       <a
         href="/gioi-thieu"
-        class="d-flex flex-column align-items-center justify-content-center"
+        class="d-flex flex-column align-items-center justify-content-center home"
       >
         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
         <span>Giới thiệu</span>
@@ -100,54 +100,28 @@
         >{{ username() }}</span
       >
     </div>
-    <!-- <button
-      class="btn btn-secondary dropdown-toggle"
-      type="button"
-      id="dropdownMenu2"
-      data-bs-toggle="dropdown"
-      aria-expanded="false"
-    >
-    <div style="color: #b5b5c3 !important" id="dropdownMenu2"
-    data-bs-toggle="dropdown"
-    class="dropdown-toggle"
-    aria-expanded="false">
-      Hi,
-      <span
-        style="
-          background-color: #c9f7f5;
-          color: #1bc5bd;
-          padding: 5px;
-          border-radius: 5px;
-        "
-        >{{ username() }}</span
-      >
-    </div>
-    </button> -->
+
     <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
       <li></li>
       <li>
-        <button class="dropdown-item" type="button" (click)="logout()">Đăng xuất</button>
+        <a href="/profile"><button class="dropdown-item" id="dropdown-info" type="button" >Thông tin cá nhân</button></a>
+      </li>
+      <li>
+        <a href="/doi-mat-khau"><button class="dropdown-item" id="dropdown-info" type="button">Đổi mật khẩu</button></a>
+      </li>
+      <li>
+        <a href="/bai-lam-cua-toi"><button class="dropdown-item" id="dropdown-info" type="button" >Bài làm của tôi</button></a>
+      </li>
+      <li>
+        <a href="/day-hoc-truc-tuyen"><button class="dropdown-item" id="dropdown-info"  type="button">Lớp học của tôi</button></a>
+      </li>
+      <li>
+        <button class="dropdown-item" id="dropdown-info" type="button" (click)="logout()">Đăng xuất</button>
       </li>
     </ul>
   </div>
 
-  <!-- <div
-    class="account not-logged-in position-relative ml-auto"
-    *ngIf="!noLogin()"
-  >
-    <div style="color: #b5b5c3 !important">
-      Hi,
-      <span
-        style="
-          background-color: #c9f7f5;
-          color: #1bc5bd;
-          padding: 5px;
-          border-radius: 5px;
-        "
-        >{{ username() }}</span
-      >
-    </div>
-    </div> -->
+
     </div>
 
 

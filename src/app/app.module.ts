@@ -44,6 +44,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {DragDropModule} from '@angular/cdk/drag-drop';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { ProfileComponent } from './profile/profile.component';
+import { ChangepassComponent } from './changepass/changepass.component';
+import { BailamcuatoiComponent } from './bailamcuatoi/bailamcuatoi.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +80,10 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     HistoryluyentapComponent,
     MathjaxComponent,
     SinhhocontapComponent,
-    TructuyenComponent
+    TructuyenComponent,
+    ProfileComponent,
+    ChangepassComponent,
+    BailamcuatoiComponent
 
 
 

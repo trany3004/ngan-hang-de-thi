@@ -1,0 +1,62 @@
+.navbar.d-none.d-lg-flex {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: #000000 0px -4px 12px 0px;
+          box-shadow: #000000 0px -4px 12px 0px;
+  color: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 24px;
+  padding: 16px;
+  text-align: left;
+}
+
+.list-unstyled.components.d-flex.justify-content-between {
+  color: #404040;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  line-height: 24px;
+  text-align: left;
+}
+
+.account.not-logged-in.position-relative.ml-auto {
+  color: #404040;
+  line-height: 24px;
+  margin: 0px 0px 0px 95.25px;
+  text-align: left;
+}
+
+.side-left {
+  width: 180px;
+  height: 100%;
+  -webkit-box-shadow: inset -1px 0 0 0 #e4e4e4;
+          box-shadow: inset -1px 0 0 0 #e4e4e4;
+}
+
+.side-left ul li, .side-left .side-bar-mobile ul li {
+  border-radius: 5px;
+}
+
+.side-left ul li a, .side-left .side-bar-mobile ul li a {
+  font-weight: 500;
+  padding: .7rem 1rem;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.side-left ul li:hover, .side-left .side-bar-mobile ul li:hover {
+  background-color: #F0F0F1;
+  cursor: pointer;
+}
+/*# sourceMappingURL=header.component.css.map */

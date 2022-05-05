@@ -1,3 +1,6 @@
+import { BailamcuatoiComponent } from './bailamcuatoi/bailamcuatoi.component';
+import { ChangepassComponent } from './changepass/changepass.component';
+import { ProfileComponent } from './profile/profile.component';
 import { SinhhocontapComponent } from './sinhhocontap/sinhhocontap.component';
 import { HistoryluyentapComponent } from './historyluyentap/historyluyentap.component';
 
@@ -34,9 +37,12 @@ const routes: Routes = [
   {path: 'welcome', component: WellcomeComponent},
   {path: 'hocsinh', loadChildren: () => import('./hocsinh/hocsinh.module').then(m => m.HocSinhModule)},
   {path: 'thay-co-giao', component: ThayCoGiaoComponent},
-  {path: 'ban-giam-hieu', component: BanGiamHieuComponent},
-  {path: 'phu-huynh-hoc-sinh', component: PhuHuynhHocSinhComponent},
+ // {path: 'ban-giam-hieu', component: BanGiamHieuComponent},
+ // {path: 'phu-huynh-hoc-sinh', component: PhuHuynhHocSinhComponent},
   {path: 'gioi-thieu', component: GioiThieuComponent},
+  {path: 'profile', component: ProfileComponent},
+  {path: 'bai-lam-cua-toi', component: BailamcuatoiComponent},
+  {path: 'doi-mat-khau', component: ChangepassComponent},
   {path: 'lien-he', component: ContactComponent},
   {path: 'on-tap/:ontapId', component: OntapComponent },
   // {path: 'vat-ly', component: PhysicsComponent},

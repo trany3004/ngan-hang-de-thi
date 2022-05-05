@@ -79,3 +79,18 @@ figure.image img {
   max-width: 500px;
   max-height: 500px;
 }
+.btn-content{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn_pdf {
+  min-width: 80px;
+  min-height: 40px;
+  border-radius: 2px;
+  background-color: #729e5d;
+  border: 1px solid #729e5d;
+
+}
+
+

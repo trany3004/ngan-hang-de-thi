@@ -1,9 +1,6 @@
-<!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-<script
-  id="MathJax-script"
-  async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-></script> -->
+
+
+<div id="content" #content>
 <div class="main-content">
   <div class="container"></div>
   <div class="row m-lg-2">
@@ -14,6 +11,7 @@
       <div [appMath]="chudeDetail.noidung"></div>
       <!-- [appMath]="ontapContent" -->
       <!-- <mathjax [content]="ontapContent?.content"></mathjax> -->
+      <!-- <button type="button" (click)="printpdf()">Print PDF</button> -->
     </div>
     <!-- <div class="col-md-12 mt-12 m-12" *ngIf="monHoc  !== MONHOC.TOAN" [innerHtml] = "ontapContent?.content"> -->
     <!-- </div> -->
@@ -22,5 +20,13 @@
 
       </div>
     </div> -->
+    <div class="btn-content">
+      <button (click)="pdf()" class="btn_pdf">
+       PDF</button>
+    </div>
+
   </div>
+
 </div>
+</div>
+

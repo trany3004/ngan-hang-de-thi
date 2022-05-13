@@ -38,19 +38,10 @@ export class OntapComponent implements OnInit {
     private chuDeService: ChuDeService
   ) { }
   @ViewChild('content', {static: true}) el!: ElementRef<HTMLImageElement>;
-  pdf() {
-    html2canvas(this.el.nativeElement).then((canvas) => {
-      const imgData = canvas.toDataURL('image/jpeg');
-      const pdf = new jsPDF({
-        orientation: 'portrait',
-      });
-      const imageProps = pdf.getImageProperties(imgData);
-      const pdfw = pdf.internal.pageSize.getWidth();
-      const pdfh = (imageProps.height* pdfw)/ imageProps.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, pdfw, pdfh);
-      pdf.save('education.pdf');
-    })
-  }
+
+
+
+
 
   ngOnInit(): void {
     console.log('ontapid >>', this.route.snapshot.params.ontapId)

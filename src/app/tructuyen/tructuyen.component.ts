@@ -1,3 +1,4 @@
+import { UserService } from './../services/user.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,8 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tructuyen.component.css']
 })
 export class TructuyenComponent implements OnInit {
-
-  constructor() { }
+  user: any = {}
+  
+  constructor( private userService: UserService) { }
 
   ngOnInit(): void {
   }

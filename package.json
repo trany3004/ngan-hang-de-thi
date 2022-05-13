@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 4204 --proxy-config proxy-config.json --host 0.0.0.0",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -24,7 +24,7 @@
     "@angular/router": "~12.1.0",
     "@types/mathjax": "0.0.37",
     "ajv": "8.6.1",
-    "angularx-social-login": "^4.0.1",
+    "angularx-social-login": "^4.1.0",
     "arrive": "2.4.1",
     "bootstrap": "^5.1.0",
     "bootstrap-material-design": "4.1.3",
